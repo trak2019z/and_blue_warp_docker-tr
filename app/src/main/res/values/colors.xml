@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#8CA9D6</color>
+	<color name="colorPrimaryDark">#36648B</color>
+	<color name="baseBackground">#ffffff</color>
+	<color name="colorAccent">#000000</color>
+	<color name="gradient_base_start">#99daff</color>
+	<color name="gradient_base_end">#008080</color>
+	<color name="tv_text_black">#000000</color>
+	<color name="colorRedError">#FF3B30</color>
+	<color name="tv_text_white">#FFFFFF</color>
+	<color name="white">#FFFFFF</color>
+	<color name="toolbar_menu_color">@color/colorAccent</color>
+
+	<color name="appBaseColor">#808185</color>
+	<color name="appAccentColor">#36648B</color>
+	<color name="primaryTransparent">#EE082656</color>
+</resources>

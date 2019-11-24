@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="viewModel" type="blue_bay.app.features.register.RegisterViewModel"/>
+    </data>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:background="@color/baseBackground"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="48dp"
+                    android:id="@+id/btn_register_back"
+                    app:layout_constraintTop_toTopOf="@id/iv_logo_register"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_logo_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/iv_logo_register"
+                    android:src="@drawable/ic_arrow_left_black"
+                    android:tint="@color/appAccentColor"
+                    android:layout_height="48dp"/>
+
+            <ImageView
+                    android:layout_height="@dimen/logo_small_size"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/iv_logo_register"
+                    android:src="@drawable/ic_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="32dp"/>
+
+            <fragment
+                    android:id="@+id/fragment_navigation"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:defaultNavHost="true"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_logo_register"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_register_next"
+                    android:layout_marginTop="32dp"/>
+
+            <Button
+                    android:id="@+id/btn_register_next"
+                    style="@style/ButtonStyleFill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:backgroundTint="@color/appAccentColor"
+                    android:text="@string/login_label"
+                    android:onClick="@{() -> viewModel.register()}"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <include
+                    android:id="@+id/loading_state"
+                    layout="@layout/loading_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/btn_register_next"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

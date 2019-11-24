@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:attrs="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="blue_bay.app.utils.InputMethod"/>
+    </data>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:orientation="vertical"
+                android:background="@color/baseBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="32dp"
+                    android:id="@+id/iv_logo"
+                    android:src="@drawable/ic_logo"
+                    app:layout_constraintBottom_toTopOf="@id/btn_login_menu_login"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/tv_account_type"
+                      android:textColor="@color/appAccentColor"
+                      android:textStyle="bold"
+                      android:textSize="22sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/iv_logo"/>
+            <Button
+                    android:id="@+id/btn_login_menu_login"
+                    style="@style/ButtonStyleFill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:backgroundTint="@color/appAccentColor"
+                    android:text="@string/login_label"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_login_menu_register"/>
+
+
+            <Button
+                    style="@style/ButtonStyleStroke"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/sign_up_label"
+                    android:id="@+id/btn_login_menu_register"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

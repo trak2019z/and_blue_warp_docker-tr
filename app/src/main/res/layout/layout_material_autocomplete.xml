@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="input"
+                type="com.mlykotom.valifi.fields.ValiFieldText"/>
+
+        <variable
+                name="inputType"
+                type="Integer"/>
+
+        <variable
+                name="hint"
+                type="String"/>
+
+        <variable
+                name="drawable"
+                type="android.graphics.drawable.Drawable"/>
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/tv_text_white"
+            android:layout_height="@dimen/input_base_height"
+            app:cardCornerRadius="@dimen/base_text_radius">
+
+        <AutoCompleteTextView
+                android:id="@+id/autocomplete_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@{hint}"/>
+    </androidx.cardview.widget.CardView>
+</layout>

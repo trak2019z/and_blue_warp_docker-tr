@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Blue Bay</string>
+
+    <string name="login_label">Login</string>
+    <string name="email_label">E-mail</string>
+    <string name="password_label">Password</string>
+    <string name="sign_up_label">Sign up</string>
+    <string name="forgot_password_label">Forgot your password?</string>
+    <string name="login_alternative">Sign in with</string>
+    <string name="error_placeholder">Enter valid %s</string>
+    <string name="error_base">Some fields are empty or invalid</string>
+    <string name="login_success">Login success</string>
+    <string name="repeat_password_label">Repeat password</string>
+    <string name="next_label">Next</string>
+    <string name="finish_label">Finish</string>
+    <string name="country_label">Country</string>
+    <string name="post_code_label">Post code</string>
+    <string name="name_label">Name</string>
+    <string name="surname_label">Surname</string>
+    <string name="register_label">Register</string>
+    <string name="alert_register_success">Register success</string>
+    <string name="resend_password">Reset password</string>
+    <string name="reset_label">Reset</string>
+    <string name="reset_password_description">Please provide email address \nassociated with your account</string>
+    <string name="reset_password_success">Instructions has been sent to your email</string>
+
+    <string name="tutorial_title_1">Measure your exercise</string>
+    <string name="tutorial_title_2">Sign up to competitions</string>
+    <string name="tutorial_title_3">Earn coins to receive benefits and help charitable organizations</string>
+    <string name="tutorial_title_4">Join fastest growing sport community</string>
+
+    <string name="account_type_store">Store</string>
+    <string name="account_type_sales_rep">Sales rep</string>
+    <string name="account_type_distributor">Distributor</string>
+
+    <string name="articles">Articles</string>
+    <string name="filter">Filter</string>
+    <string name="tags_hint">Search tags…</string>
+
+</resources>

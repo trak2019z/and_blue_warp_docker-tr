@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_sign_in_menu" app:startDestination="@id/signInMenuFragment">
+
+	<fragment android:id="@+id/loginFragment"
+	          android:name="blue_bay.app.features.menu.login.LoginFragment"
+	          android:label="LoginFragment"
+	          tools:layout="@layout/fragment_sign_in_menu">
+		<action android:id="@+id/action_loginFragment_to_resendPasswordFragment"
+				app:destination="@id/resendPasswordFragment"/>
+	</fragment>
+	<fragment android:id="@+id/resendPasswordFragment"
+	          tools:layout="@layout/fragment_resend_password"
+	          android:name="blue_bay.app.features.menu.reset_password.ResetPasswordFragment"
+	          android:label="ResendPasswordFragment"/>
+	<fragment android:id="@+id/signInMenuFragment" android:name="blue_bay.app.features.menu.menu.SignInMenuFragment"
+	          android:label="SignInMenuFragment">
+		<action android:id="@+id/action_signInMenuFragment_to_loginFragment"
+				app:destination="@id/loginFragment"
+				app:enterAnim="@anim/out_to_left"
+				app:exitAnim="@anim/in_from_right"
+				app:popEnterAnim="@anim/in_from_left"
+				app:popExitAnim="@anim/out_to_right"/>
+	</fragment>
+</navigation>

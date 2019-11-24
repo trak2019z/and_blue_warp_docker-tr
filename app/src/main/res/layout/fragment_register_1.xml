@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="blue_bay.app.features.register.RegisterViewModel"/>
+
+        <import type="blue_bay.app.utils.InputMethod"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/et_register_email"
+                app:hint="@{@string/email_label}"
+                style="@style/BaseInputStyle"
+                app:input="@{viewModel.emailInput}"
+                app:inputType="@{InputMethod.EMAIL}"
+                layout="@layout/layout_material_input"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+        <include
+                android:id="@+id/et_register_password"
+                app:hint="@{@string/password_label}"
+                style="@style/BaseInputStyle"
+                app:input="@{viewModel.passwordInput}"
+                app:inputType="@{InputMethod.PASSWORD}"
+                layout="@layout/layout_material_input"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+        <include
+                android:id="@+id/et_register_repeat_password"
+                app:hint="@{@string/repeat_password_label}"
+                style="@style/BaseInputStyle"
+                app:input="@{viewModel.repeatPasswordInput}"
+                app:inputType="@{InputMethod.PASSWORD}"
+                layout="@layout/layout_material_input"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</layout>

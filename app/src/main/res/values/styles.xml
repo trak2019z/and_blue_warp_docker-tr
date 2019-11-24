@@ -1,0 +1,76 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/out_to_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/in_from_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_to_right</item>
+    </style>
+
+    <style name="AppTheme.Error" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/colorRedError</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:textAllCaps">true</item>
+
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/tv_medium</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_base_height</item>
+        <item name="android:layout_marginStart">@dimen/button_base_margin_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/button_base_margin_horizontal</item>
+    </style>
+
+    <style name="ButtonStyleFill" parent="ButtonStyle">
+        <item name="android:textColor">@color/baseBackground</item>
+        <item name="android:background">@drawable/button_base_round</item>
+    </style>
+
+    <style name="ButtonStyleStroke" parent="ButtonStyle">
+        <item name="android:textColor">@color/appAccentColor</item>
+        <item name="android:background">@drawable/button_base_round_stroke</item>
+    </style>
+
+    <style name="BaseInputStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/input_base_height</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <!--Text Views-->
+    <style name="TextViewBase">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:color">@color/gradient_base_start</item>
+    </style>
+
+    <style name="TextViewBig" parent="TextViewBase">
+        <item name="android:textSize">@dimen/tv_text_big</item>
+    </style>
+
+    <style name="TextViewVeryBig" parent="TextViewBase">
+        <item name="android:textSize">@dimen/tv_text_very_big</item>
+    </style>
+
+    <style name="TextViewMedium" parent="TextViewBase">
+        <item name="android:textSize">@dimen/tv_text_medium</item>
+    </style>
+
+    <style name="TextViewSmall" parent="TextViewBase">
+        <item name="android:textSize">@dimen/tv_text_small</item>
+    </style>
+
+</resources>
